@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantegy Software</title>
+  <meta name="description" content="Expert software development company specializing in modern technologies and architecture modernization">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#C85A54',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0) translateX(-50%); }
+      50% { transform: translateY(-12px) translateX(-50%); }
+    }
+    .animate-bounce-slow { animation: bounce-slow 2s infinite; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <div id="logo-icon" class="w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl bg-white text-brand transition-colors">
+            P
+          </div>
+          <span id="logo-text" class="text-xl font-semibold text-white transition-colors">
+            Pantegy Software
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#hero" class="nav-link text-white transition-colors hover:opacity-70">Home</a>
+          <a href="#services" class="nav-link text-white transition-colors hover:opacity-70">Services</a>
+          <a href="#clients" class="nav-link text-white transition-colors hover:opacity-70">Clients</a>
+          <a href="#contact" class="nav-link text-white transition-colors hover:opacity-70">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-white transition-colors" aria-label="Toggle menu">
+          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav id="mobile-menu" class="md:hidden hidden pb-4 bg-white shadow-lg rounded-b-lg">
+        <a href="#hero" class="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50">Home</a>
+        <a href="#services" class="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50">Services</a>
+        <a href="#clients" class="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50">Clients</a>
+        <a href="#contact" class="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-brand">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-20 w-64 h-64 border-4 border-white rounded-full"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 border-4 border-white rounded-full"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div class="max-w-4xl mx-auto space-y-8">
+          <div class="mb-8">
+            <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">
+              We build better software for your business
+            </h1>
+          </div>
+
+          <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
+            Expert software development company specializing in modern technologies and architecture modernization
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <a href="#contact" class="bg-white text-brand px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg inline-flex items-center gap-2">
+              Get in Touch
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 animate-bounce-slow">
+        <div class="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
+          <div class="w-1 h-2 bg-white rounded-full"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold text-brand mb-6">
+            this works.
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            We deliver software solutions that actually work. Our expertise spans modern development practices and proven architectural patterns.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Custom Software Development -->
+          <div class="group p-6 rounded-xl border border-gray-200 hover:border-brand hover:shadow-xl transition-all duration-300">
+            <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">Custom Software Development</h3>
+            <p class="text-gray-600 leading-relaxed">Tailored solutions built with modern technologies to meet your unique business requirements.</p>
+          </div>
+
+          <!-- Cloud Solutions -->
+          <div class="group p-6 rounded-xl border border-gray-200 hover:border-brand hover:shadow-xl transition-all duration-300">
+            <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">Cloud Solutions</h3>
+            <p class="text-gray-600 leading-relaxed">Scalable cloud applications using Azure and other leading cloud platforms.</p>
+          </div>
+
+          <!-- System Architecture -->
+          <div class="group p-6 rounded-xl border border-gray-200 hover:border-brand hover:shadow-xl transition-all duration-300">
+            <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">System Architecture</h3>
+            <p class="text-gray-600 leading-relaxed">Expert architecture design using DDD, CQRS, and Event Sourcing patterns.</p>
+          </div>
+
+          <!-- Distributed Systems -->
+          <div class="group p-6 rounded-xl border border-gray-200 hover:border-brand hover:shadow-xl transition-all duration-300">
+            <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-900">Distributed Systems</h3>
+            <p class="text-gray-600 leading-relaxed">High-performance distributed systems designed for reliability and scale.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative overflow-hidden bg-brand">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 right-10 w-64 h-64 border-4 border-white rounded-full"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 border-4 border-white rounded-full"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-6xl font-bold text-white mb-6">
+            this works.
+          </h2>
+          <h3 class="text-4xl md:text-5xl font-bold text-white mb-8">
+            Let's Build Something Great
+          </h3>
+        </div>
+
+        <div class="max-w-2xl mx-auto text-center">
+          <a href="mailto:info@pantegysoftware.cz" class="inline-flex items-center gap-2 bg-white text-brand px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+            Start Your Project
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Pantegy Software</h3>
+          <p class="text-gray-400 leading-relaxed">
+            A software house specializing in modern technologies, cloud solutions, and architecture modernization. We build software that works.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Technologies</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">.NET</span>
+            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Azure</span>
+            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Messaging</span>
+            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Microservices</span>
+            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">DDD</span>
+            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">CQRS</span>
+            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Event Sourcing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <p>&copy; 2026 Pantegy Software. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    const logoIcon = document.getElementById('logo-icon');
+    const logoText = document.getElementById('logo-text');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY > 50;
+      header.classList.toggle('bg-transparent', !scrolled);
+      header.classList.toggle('bg-white', scrolled);
+      header.classList.toggle('shadow-md', scrolled);
+
+      logoIcon.classList.toggle('bg-white', !scrolled);
+      logoIcon.classList.toggle('text-brand', !scrolled);
+      logoIcon.classList.toggle('bg-brand', scrolled);
+      logoIcon.classList.toggle('text-white', scrolled);
+
+      logoText.classList.toggle('text-white', !scrolled);
+      logoText.classList.toggle('text-gray-900', scrolled);
+
+      navLinks.forEach(link => {
+        link.classList.toggle('text-white', !scrolled);
+        link.classList.toggle('text-gray-700', scrolled);
+      });
+
+      mobileMenuBtn.classList.toggle('text-white', !scrolled);
+      mobileMenuBtn.classList.toggle('text-gray-900', scrolled);
+    });
+
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden', !isOpen);
+      closeIcon.classList.toggle('hidden', isOpen);
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
