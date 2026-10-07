@@ -5,301 +5,268 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary SEO -->
-  <title>Pantegy Software | Custom Software Development & Cloud Solutions</title>
-  <meta name="description" content="Pantegy Software is an expert software development company specializing in .NET, Azure, DDD, CQRS, Event Sourcing, and architecture modernization.">
-  <meta name="keywords" content="software development, .NET, Azure, cloud solutions, microservices, DDD, CQRS, Event Sourcing, distributed systems, system architecture, software house, Czech Republic">
-  <meta name="author" content="Pantegy Software">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://pantegysoftware.github.io/">
+  <title>Pantegy Software | Software architecture, agentic AI and consulting</title>
+  <meta name="description" content="Pantegy Software is a software house from the Czech Republic. We do software architecture, agentic AI and consulting.">
+  <link rel="canonical" href="https://pantegysoftware.com/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://pantegysoftware.github.io/">
-  <meta property="og:title" content="Pantegy Software | Custom Software Development & Cloud Solutions">
-  <meta property="og:description" content="Expert software development company specializing in .NET, Azure, DDD, CQRS, Event Sourcing, and architecture modernization.">
-  <meta property="og:image" content="https://pantegysoftware.github.io/og-image.png">
+  <meta property="og:url" content="https://pantegysoftware.com/">
+  <meta property="og:title" content="Pantegy Software | Software architecture, agentic AI and consulting">
+  <meta property="og:description" content="Software house from the Czech Republic. We do software architecture, agentic AI and consulting.">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Pantegy Software">
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pantegy Software | Custom Software Development & Cloud Solutions">
-  <meta name="twitter:description" content="Expert software development company specializing in .NET, Azure, DDD, CQRS, Event Sourcing, and architecture modernization.">
-  <meta name="twitter:image" content="https://pantegysoftware.github.io/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Pantegy Software | Software architecture, agentic AI and consulting">
+  <meta name="twitter:description" content="Software house from the Czech Republic. We do software architecture, agentic AI and consulting.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <meta name="theme-color" content="#C85A54">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: '#C85A54',
-          }
-        }
-      }
-    }
-  </script>
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
+
   <style>
-    html { scroll-behavior: smooth; }
-    @keyframes bounce-slow {
-      0%, 100% { transform: translateY(0) translateX(-50%); }
-      50% { transform: translateY(-12px) translateX(-50%); }
+    :root {
+      --ink: #1B2430;
+      --slate: #56616C;
+      --mist: #D9E0E4;
+      --signal: #C0524C; /* brand; white on it = 4.6:1 */
+      --night: #A9B4BE;  /* secondary text on ink */
+      --edge: #2E3A47;   /* dividers on ink */
     }
-    .animate-bounce-slow { animation: bounce-slow 2s infinite; }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.55;
+      color: var(--ink);
+      background: #fff;
+    }
+    h1, h2, p, dl, dd, figure { margin: 0; }
+    h1, h2 { text-wrap: balance; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
+
+    .container { max-width: 72rem; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+
+    .skip-link {
+      position: absolute; top: -4rem; left: 1rem; z-index: 10;
+      padding: .5rem 1rem; background: var(--ink); color: #fff;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* Header */
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 4.5rem; }
+    .logo { display: flex; align-items: center; gap: .625rem; font-weight: 700; font-stretch: 112%; text-decoration: none; }
+    .logo-mark {
+      display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 6px;
+      background: var(--signal); color: #fff; font-weight: 800;
+    }
+    .site-nav { display: flex; gap: clamp(1rem, 3vw, 2rem); font-size: 1rem; font-weight: 500; }
+    .site-nav a { text-decoration: none; }
+    .site-nav a:hover { text-decoration: underline; text-underline-offset: .3em; }
+
+    /* Hero */
+    .hero { padding-block: clamp(2rem, 6vw, 4.5rem) clamp(4rem, 9vw, 7rem); }
+    .slogan {
+      margin-bottom: clamp(2rem, 5vw, 3.5rem);
+      font-size: min(14vw, 10rem); font-weight: 800; font-stretch: 125%;
+      line-height: .9; letter-spacing: -.03em;
+    }
+    .hero-grid { display: grid; gap: 3rem; align-items: center; }
+    @media (min-width: 960px) { .hero-grid { grid-template-columns: 5fr 6fr; gap: 4rem; } }
+    .hero h1 { font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem); font-weight: 700; font-stretch: 112%; line-height: 1.15; }
+    .hero-text p { max-width: 34rem; margin-top: 1.25rem; color: var(--slate); }
+    .btn {
+      display: inline-block; margin-top: 2rem; padding: .875rem 1.5rem; border-radius: 6px;
+      background: var(--signal); color: #fff; font-weight: 600; text-decoration: none;
+    }
+    .btn:hover { background: var(--ink); }
+
+    /* Network diagram */
+    .net svg { display: block; width: 100%; height: auto; }
+    .net figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; margin-top: 1rem; color: var(--slate); font-size: 1rem; }
+    .net button { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: .3em; cursor: pointer; }
+    .net button:hover { color: var(--ink); }
+    .edges { fill: none; stroke: var(--mist); stroke-width: 2; }
+    .node { fill: #fff; stroke: var(--ink); stroke-width: 2; }
+    .down-ring { fill: none; stroke: var(--slate); stroke-width: 2; stroke-dasharray: 3 5; }
+    .packets { fill: var(--signal); }
+
+    /* Services */
+    .services { padding-block: clamp(4rem, 9vw, 7rem); }
+    .section-title { margin-bottom: 2.5rem; font-size: clamp(1.875rem, 1.4rem + 1.5vw, 2.5rem); font-weight: 700; font-stretch: 112%; line-height: 1.15; }
+    .service { display: grid; gap: .5rem 2rem; padding-block: 1.75rem; border-top: 1px solid var(--mist); }
+    .service:last-child { border-bottom: 1px solid var(--mist); }
+    @media (min-width: 768px) { .service { grid-template-columns: 2fr 3fr; } }
+    .service dt { font-size: 1.5rem; font-weight: 600; font-stretch: 112%; line-height: 1.25; }
+    .service dd { max-width: 36rem; color: var(--slate); }
+
+    /* Contact + footer */
+    .contact { padding-block: clamp(4rem, 9vw, 7rem); background: var(--ink); color: #fff; }
+    .contact .section-title { margin-bottom: 1rem; }
+    .contact p { max-width: 34rem; color: var(--night); }
+    .email {
+      display: inline-block; margin-top: 2.5rem;
+      font-size: clamp(1.375rem, 1rem + 2.2vw, 2.75rem); font-weight: 600; font-stretch: 112%;
+      text-decoration-color: var(--signal); text-decoration-thickness: 3px; text-underline-offset: .25em;
+      overflow-wrap: anywhere;
+    }
+    .email:hover { text-decoration-color: #fff; }
+    .site-footer { background: var(--ink); color: var(--night); font-size: 1rem; }
+    .site-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; padding-block: 2rem; border-top: 1px solid var(--edge); }
   </style>
 </head>
-<body class="bg-white text-gray-900">
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div id="logo-icon" class="w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl bg-white text-brand transition-colors">
-            P
-          </div>
-          <span id="logo-text" class="text-xl font-semibold text-white transition-colors">
-            Pantegy Software
-          </span>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8">
-          <a href="#hero" class="nav-link text-white transition-colors hover:opacity-70">Home</a>
-          <a href="#services" class="nav-link text-white transition-colors hover:opacity-70">Services</a>
-          <a href="#contact" class="nav-link text-white transition-colors hover:opacity-70">Contact</a>
-        </nav>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-white transition-colors" aria-label="Toggle menu">
-          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <nav id="mobile-menu" class="md:hidden hidden pb-4 bg-white shadow-lg rounded-b-lg">
-        <a href="#hero" class="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50">Home</a>
-        <a href="#services" class="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50">Services</a>
-        <a href="#contact" class="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50">Contact</a>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-mark" aria-hidden="true">P</span>
+        Pantegy Software
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-brand">
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-20 left-20 w-64 h-64 border-4 border-white rounded-full"></div>
-        <div class="absolute bottom-20 right-20 w-96 h-96 border-4 border-white rounded-full"></div>
-      </div>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="slogan">this works.</p>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div class="max-w-4xl mx-auto space-y-8">
-          <div class="mb-8">
-            <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">
-              We build better software for your business
-            </h1>
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h1>We design and build software systems that keep running when one of their parts fails.</h1>
+            <p>Pantegy Software is a software house from the Czech Republic. We work on software architecture and agentic AI, and advise teams that build their own software.</p>
+            <a href="mailto:info@pantegysoftware.com" class="btn">Email us</a>
           </div>
 
-          <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-            Expert software development company specializing in modern technologies and architecture modernization
-          </p>
+          <figure class="net">
+            <svg id="net" viewBox="0 0 520 360" role="img" aria-labelledby="net-caption">
+              <defs>
+                <path id="route-a" d="M40 180H160L310 70L470 180"/>
+                <path id="route-b" d="M40 180H470"/>
+                <path id="route-c" d="M40 180H160L310 290L470 180"/>
+              </defs>
 
-          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <a href="#contact" class="bg-white text-brand px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg inline-flex items-center gap-2">
-              Get in Touch
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </a>
-            <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </div>
+              <!-- Shared 12 s cycle: worker 2 is down from 33 % to 71 % -->
+              <g class="edges">
+                <path d="M40 180H160M160 180L310 70L470 180M160 180L310 290L470 180"/>
+                <path d="M160 180H470">
+                  <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;.33;.36;.68;.71;1" values="1;1;.3;.3;1;1"/>
+                </path>
+              </g>
 
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 animate-bounce-slow">
-        <div class="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
-          <div class="w-1 h-2 bg-white rounded-full"></div>
-        </div>
-      </div>
-    </section>
+              <g class="packets">
+                <circle r="5"><animateMotion dur="4s" begin="0s" repeatCount="indefinite"><mpath href="#route-a"/></animateMotion></circle>
+                <circle r="5"><animateMotion dur="4s" begin="-1.33s" repeatCount="indefinite"><mpath href="#route-a"/></animateMotion></circle>
+                <circle r="5"><animateMotion dur="4s" begin="-2.67s" repeatCount="indefinite"><mpath href="#route-a"/></animateMotion></circle>
+                <circle r="5"><animateMotion dur="4s" begin="-.67s" repeatCount="indefinite"><mpath href="#route-c"/></animateMotion></circle>
+                <circle r="5"><animateMotion dur="4s" begin="-2s" repeatCount="indefinite"><mpath href="#route-c"/></animateMotion></circle>
+                <circle r="5"><animateMotion dur="4s" begin="-3.33s" repeatCount="indefinite"><mpath href="#route-c"/></animateMotion></circle>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-5xl md:text-6xl font-bold text-brand mb-6">
-            this works.
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            We deliver software solutions that actually work. Our expertise spans modern development practices and proven architectural patterns.
-          </p>
-        </div>
+                <!-- Through worker 2, hidden while it is down -->
+                <g>
+                  <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;.33;.36;.68;.71;1" values="1;1;0;0;1;1"/>
+                  <circle r="5"><animateMotion dur="3.4s" begin="0s" repeatCount="indefinite"><mpath href="#route-b"/></animateMotion></circle>
+                  <circle r="5"><animateMotion dur="3.4s" begin="-1.13s" repeatCount="indefinite"><mpath href="#route-b"/></animateMotion></circle>
+                  <circle r="5"><animateMotion dur="3.4s" begin="-2.27s" repeatCount="indefinite"><mpath href="#route-b"/></animateMotion></circle>
+                </g>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Custom Software Development -->
-          <div class="group p-6 rounded-xl border border-gray-200 hover:border-brand hover:shadow-xl transition-all duration-300">
-            <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 text-gray-900">Custom Software Development</h3>
-            <p class="text-gray-600 leading-relaxed">Tailored solutions built with modern technologies to meet your unique business requirements.</p>
-          </div>
+                <!-- Extra traffic through workers 1 and 3 while worker 2 is down -->
+                <g opacity="0">
+                  <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;.33;.36;.68;.71;1" values="0;0;1;1;0;0"/>
+                  <circle r="5"><animateMotion dur="4s" begin="-.67s" repeatCount="indefinite"><mpath href="#route-a"/></animateMotion></circle>
+                  <circle r="5"><animateMotion dur="4s" begin="-2s" repeatCount="indefinite"><mpath href="#route-a"/></animateMotion></circle>
+                  <circle r="5"><animateMotion dur="4s" begin="-3.33s" repeatCount="indefinite"><mpath href="#route-a"/></animateMotion></circle>
+                  <circle r="5"><animateMotion dur="4s" begin="0s" repeatCount="indefinite"><mpath href="#route-c"/></animateMotion></circle>
+                  <circle r="5"><animateMotion dur="4s" begin="-1.33s" repeatCount="indefinite"><mpath href="#route-c"/></animateMotion></circle>
+                  <circle r="5"><animateMotion dur="4s" begin="-2.67s" repeatCount="indefinite"><mpath href="#route-c"/></animateMotion></circle>
+                </g>
+              </g>
 
-          <!-- Cloud Solutions -->
-          <div class="group p-6 rounded-xl border border-gray-200 hover:border-brand hover:shadow-xl transition-all duration-300">
-            <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 text-gray-900">Cloud Solutions</h3>
-            <p class="text-gray-600 leading-relaxed">Scalable cloud applications using Azure and other leading cloud platforms.</p>
-          </div>
-
-          <!-- System Architecture -->
-          <div class="group p-6 rounded-xl border border-gray-200 hover:border-brand hover:shadow-xl transition-all duration-300">
-            <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 text-gray-900">System Architecture</h3>
-            <p class="text-gray-600 leading-relaxed">Expert architecture design using DDD, CQRS, and Event Sourcing patterns.</p>
-          </div>
-
-          <!-- Distributed Systems -->
-          <div class="group p-6 rounded-xl border border-gray-200 hover:border-brand hover:shadow-xl transition-all duration-300">
-            <div class="w-14 h-14 bg-brand rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-3 text-gray-900">Distributed Systems</h3>
-            <p class="text-gray-600 leading-relaxed">High-performance distributed systems designed for reliability and scale.</p>
-          </div>
+              <!-- Entry, queue, three workers, store -->
+              <circle cx="40" cy="180" r="10" fill="var(--ink)"/>
+              <rect class="node" x="130" y="165" width="60" height="30" rx="6"/>
+              <path d="M148 173v14M160 173v14M172 173v14" stroke="var(--ink)" stroke-width="2"/>
+              <circle class="node" cx="310" cy="70" r="16"/>
+              <circle class="node" cx="310" cy="180" r="16">
+                <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;.33;.36;.68;.71;1" values="1;1;.3;.3;1;1"/>
+              </circle>
+              <circle class="down-ring" cx="310" cy="180" r="24" opacity="0">
+                <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;.33;.36;.68;.71;1" values="0;0;1;1;0;0"/>
+              </circle>
+              <circle class="node" cx="310" cy="290" r="16"/>
+              <circle class="node" cx="470" cy="180" r="14"/>
+              <circle cx="470" cy="180" r="6" fill="var(--ink)"/>
+            </svg>
+            <figcaption>
+              <span id="net-caption">When one worker goes down, messages flow through the other two.</span>
+              <button id="net-toggle" type="button" hidden>Pause animation</button>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 relative overflow-hidden bg-brand">
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 right-10 w-64 h-64 border-4 border-white rounded-full"></div>
-        <div class="absolute bottom-10 left-10 w-96 h-96 border-4 border-white rounded-full"></div>
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <dl>
+          <div class="service">
+            <dt>Software Architecture</dt>
+            <dd>Design of new systems and modernization of existing ones, including microservices and message-based systems that stay reliable under load. Everything runs in the cloud and scales with usage, whichever provider you use.</dd>
+          </div>
+          <div class="service">
+            <dt>Agentic AI</dt>
+            <dd>We build agentic systems, where AI agents use tools and work with your data and the systems you already have. We also help development teams move to agentic development, building software together with coding agents.</dd>
+          </div>
+          <div class="service">
+            <dt>Consulting</dt>
+            <dd>Reviews of your architecture and advice on technical decisions, for teams that build the software themselves. We also run workshops and training for development teams.</dd>
+          </div>
+        </dl>
       </div>
+    </section>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16">
-          <h2 class="text-5xl md:text-6xl font-bold text-white mb-6">
-            this works.
-          </h2>
-          <h3 class="text-4xl md:text-5xl font-bold text-white mb-8">
-            Let's Build Something Great
-          </h3>
-        </div>
-
-        <div class="max-w-2xl mx-auto text-center">
-          <a href="mailto:info@pantegysoftware.cz" class="inline-flex items-center gap-2 bg-white text-brand px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
-            Start Your Project
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Tell us what you're working on</h2>
+        <p>A few sentences about the system and what you need are enough to start.</p>
+        <a href="mailto:info@pantegysoftware.com" class="email">info@pantegysoftware.com</a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-8 mb-8">
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Pantegy Software</h3>
-          <p class="text-gray-400 leading-relaxed">
-            A software house specializing in modern technologies, cloud solutions, and architecture modernization. We build software that works.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Technologies</h3>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">.NET</span>
-            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Azure</span>
-            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Messaging</span>
-            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Microservices</span>
-            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">DDD</span>
-            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">CQRS</span>
-            <span class="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">Event Sourcing</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
-        <p>&copy; 2026 Pantegy Software. All rights reserved.</p>
-      </div>
+  <footer class="site-footer">
+    <div class="container">
+      <span>Pantegy Software, Czech Republic</span>
+      <span>&copy; 2026</span>
     </div>
   </footer>
 
   <script>
-    // Header scroll effect
-    const header = document.getElementById('header');
-    const logoIcon = document.getElementById('logo-icon');
-    const logoText = document.getElementById('logo-text');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY > 50;
-      header.classList.toggle('bg-transparent', !scrolled);
-      header.classList.toggle('bg-white', scrolled);
-      header.classList.toggle('shadow-md', scrolled);
-
-      logoIcon.classList.toggle('bg-white', !scrolled);
-      logoIcon.classList.toggle('text-brand', !scrolled);
-      logoIcon.classList.toggle('bg-brand', scrolled);
-      logoIcon.classList.toggle('text-white', scrolled);
-
-      logoText.classList.toggle('text-white', !scrolled);
-      logoText.classList.toggle('text-gray-900', scrolled);
-
-      navLinks.forEach(link => {
-        link.classList.toggle('text-white', !scrolled);
-        link.classList.toggle('text-gray-700', scrolled);
-      });
-
-      mobileMenuBtn.classList.toggle('text-white', !scrolled);
-      mobileMenuBtn.classList.toggle('text-gray-900', scrolled);
-    });
-
-    // Mobile menu toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      const isOpen = !mobileMenu.classList.contains('hidden');
-      mobileMenu.classList.toggle('hidden');
-      menuIcon.classList.toggle('hidden', !isOpen);
-      closeIcon.classList.toggle('hidden', isOpen);
-    });
-
-    // Close mobile menu when clicking a link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-      });
-    });
+    // Moving content longer than 5 s needs a pause control (WCAG 2.2.2)
+    const net = document.getElementById('net');
+    const toggle = document.getElementById('net-toggle');
+    const setPlaying = playing => {
+      playing ? net.unpauseAnimations() : net.pauseAnimations();
+      toggle.textContent = playing ? 'Pause animation' : 'Play animation';
+    };
+    toggle.hidden = false;
+    toggle.addEventListener('click', () => setPlaying(net.animationsPaused()));
+    setPlaying(!matchMedia('(prefers-reduced-motion: reduce)').matches);
   </script>
 </body>
 </html>
